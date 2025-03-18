@@ -1,8 +1,8 @@
-import Main from "../components/Main"
+import MainHome from "../components/MainHome"
 
 const Home = ()=>{
     return(
-     <Main/>
+     <MainHome />
     )
 }
 export default Home

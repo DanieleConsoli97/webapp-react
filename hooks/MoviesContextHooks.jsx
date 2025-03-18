@@ -9,8 +9,7 @@ function MoviesProvider ({children}) {
         fetch('http://localhost:3000/movies/')
         .then(response=>(response.json()))
         .then(data=> setMovies(data) )
-        .then(data=>console.log(data))
-        .catch(error => console.error('Errore:', error));
+        .catch(error => console.error('Errore:', error))
     }
 
 const value={
