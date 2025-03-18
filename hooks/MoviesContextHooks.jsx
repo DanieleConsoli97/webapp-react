@@ -5,16 +5,25 @@ function MoviesProvider ({children}) {
     
     const [movies,setMovies]=useState([])
     
+    const [movie,setMovie] = useState([])
+    
     function MoviesFetch() {
         fetch('http://localhost:3000/movies/')
         .then(response=>(response.json()))
         .then(data=> setMovies(data) )
         .catch(error => console.error('Errore:', error))
     }
-
+    function MovieSingle(id) {
+      fetch(`http://localhost:3000/movies/${id}`)
+      .then(response=>(response.json()))
+      .then(data=> setMovie(data) )
+      .catch(error => console.error('Errore:', error))
+  }
 const value={
 movies,
-MoviesFetch
+MoviesFetch,
+MovieSingle,
+movie
 }
   return (
     <MoviesContext.Provider value={value}>
