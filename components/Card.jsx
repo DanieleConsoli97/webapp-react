@@ -5,7 +5,7 @@ const Card = ({ movie }) => {
   return (
     <>
       {
-        <div  className="block rounded-xl bg-white shadow-xl dark:bg-neutral-700 text-center basis-126 ">
+        <div key={id} className="block rounded-xl bg-white shadow-xl dark:bg-neutral-700 text-center basis-126 ">
           <Link>
             <img className="rounded-t-xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
           </Link>

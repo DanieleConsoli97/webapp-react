@@ -2,8 +2,8 @@ import { useMoviesContext } from "../hooks/MoviesContextHooks"
 import { useEffect } from "react"
 import Card from './Card'
 const Main = () => {
-    const { movies, MoviesFetch } =useMoviesContext()
-    useEffect(MoviesFetch, [movies])
+    const { movies, MoviesFetch } = useMoviesContext()
+    useEffect(MoviesFetch,[])
     return (
         <>
         <div className="container m-auto">

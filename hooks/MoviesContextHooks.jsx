@@ -5,7 +5,7 @@ function MoviesProvider ({children}) {
     
     const [movies,setMovies]=useState([])
     
-    const [movie,setMovie] = useState([])
+    const [movie,setMovie] = useState({})
     
     function MoviesFetch() {
         fetch('http://localhost:3000/movies/')
@@ -13,6 +13,8 @@ function MoviesProvider ({children}) {
         .then(data=> setMovies(data) )
         .catch(error => console.error('Errore:', error))
     }
+    
+    
     function MovieSingle(id) {
       fetch(`http://localhost:3000/movies/${id}`)
       .then(response=>(response.json()))
