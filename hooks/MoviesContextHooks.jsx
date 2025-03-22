@@ -21,6 +21,7 @@ function MoviesProvider ({children}) {
       .then(data=> setMovie(data) )
       .catch(error => console.error('Errore:', error))
   }
+   
 const value={
 movies,
 MoviesFetch,
