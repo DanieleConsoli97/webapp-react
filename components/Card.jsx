@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom"
 const Card = ({ movie }) => {
-
-  const { id,title,director, genre, release_year, abstract } = movie
+  console.log(movie)
+  const { id ,title,director, genre, release_year, abstract, image } = movie
   return (
     <>
       {
         <div key={id} className="block rounded-xl bg-white shadow-xl dark:bg-neutral-700 text-center basis-126 ">
-          <Link>
-            <img className="rounded-t-xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
-          </Link>
+            <img className="rounded-t-xl" src={image} alt="" />
           <div className="border-b-2 border-neutral-100 px-6 py-4 dark:border-neutral-500">
             <h5 className="flex items-center justify-center text-neutral-500 dark:text-neutral-300">
               <span className="mr-2">

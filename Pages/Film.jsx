@@ -15,7 +15,7 @@ const Film = () => {
    
     const { movie, MovieSingle } = useMoviesContext()
     
-    useEffect(() => MovieSingle(id), [])
+    useEffect(() => MovieSingle(id), [id])
     
     const reviews = movie.reviews
     

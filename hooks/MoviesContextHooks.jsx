@@ -18,7 +18,7 @@ function MoviesProvider ({children}) {
     function MovieSingle(id) {
       fetch(`http://localhost:3000/movies/${id}`)
       .then(response=>(response.json()))
-      .then(data=> setMovie(data) )
+      .then(data=> setMovie(data))
       .catch(error => console.error('Errore:', error))
   }
    
