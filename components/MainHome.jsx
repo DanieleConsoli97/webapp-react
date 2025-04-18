@@ -6,7 +6,7 @@ const Main = () => {
     useEffect(MoviesFetch, [])
     return (
         <>
-            <div className="mx-auto max-w-screen-xl px-4 w-full">
+            <div className="mx-auto max-w-screen-xl px-4 w-full my-5 ">
                 <div className="grid w-full sm:grid-cols-2 xl:grid-cols-4 gap-6">
                     {
                         !movies ? (

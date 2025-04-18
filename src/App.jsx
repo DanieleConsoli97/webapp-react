@@ -5,6 +5,7 @@ import Card from '../components/Card.jsx'
 import { MoviesProvider } from '../hooks/MoviesContextHooks.jsx'
 import Film from "../Pages/Film.jsx"
 import Films from "../Pages/Films.jsx"
+import FormAddMovie from "../components/FormAddMovie.jsx"
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
               <Route index element={<Home />} />
               <Route path="/films" element={<Films />} />
               <Route path="/film/:id" element={<Film />} />
+              <Route path="/film/AddMovie" element={<FormAddMovie />} />
             </Route>
           </Routes>
         </BrowserRouter>
