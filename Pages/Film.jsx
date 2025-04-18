@@ -1,6 +1,7 @@
 
 import { useEffect } from 'react'
-import Card from '../components/Card.jsx'
+
+import CardSingleFilm from '../components/CardSingleFilm.jsx'
 
 import { useMoviesContext } from "../hooks/MoviesContextHooks.jsx"
 
@@ -21,19 +22,19 @@ const Film = () => {
     
     return (
         <>
-            <div className='container flex justify-center'>
-                <div className="flex flex-wrap gap-2 m-auto justify-center mt-3 basis-1/3">
+            <div className='mt-10 mx-5'>
+                <div className="flex flex-1/2 gap-6  ">
                     {
                         !movie ? (
                             <p>Nessun Film trovato</p>
                         ) : (
-                            <Card key={id} movie={movie} />
+                            <CardSingleFilm key={id} movie={movie} />
                         )
                     }
                 </div>
-    <FormRewiew key={movie.id} movie_id={movie.id} />
-            </div>
             
+          
+            <FormRewiew key={movie.id} movie_id={movie.id} />
                 <div className="flex gap-3 m-20 text-center" >
                     {
                         reviews?.map((review) => {
@@ -43,7 +44,7 @@ const Film = () => {
                         })
                     }
                 </div>
-                
+                </div>
         </>
     )
 }
