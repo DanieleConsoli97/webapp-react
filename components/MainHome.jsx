@@ -6,8 +6,8 @@ const Main = () => {
     useEffect(MoviesFetch, [])
     return (
         <>
-            <div className="container m-auto">
-                <div className="flex flex-row flex-wrap m-auto gap-3 mt-3">
+            <div className="mx-auto max-w-screen-xl px-4 w-full">
+                <div className="grid w-full sm:grid-cols-2 xl:grid-cols-4 gap-6">
                     {
                         !movies ? (
                             <p>Nessun Film trovato</p>

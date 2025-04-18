@@ -31,8 +31,10 @@ const Film = () => {
                         )
                     }
                 </div>
-
-                <div className="container flex flex-col gap-2 m-auto items-center mt-3 text-center basis-1/3" >
+    <FormRewiew key={movie.id} movie_id={movie.id} />
+            </div>
+            
+                <div className="flex gap-3 m-20 text-center" >
                     {
                         reviews?.map((review) => {
                             return (
@@ -41,9 +43,7 @@ const Film = () => {
                         })
                     }
                 </div>
-                <FormRewiew key={movie.id} movie_id={movie.id} />
-            </div>
-            
+                
         </>
     )
 }
