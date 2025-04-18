@@ -33,9 +33,12 @@ const Film = () => {
                     }
                 </div>
             
-          
-            <FormRewiew key={movie.id} movie_id={movie.id} />
-                <div className="flex gap-3 m-20 text-center" >
+          <section className='mt-10'>
+            <h2 className='mb-5 text-2xl'>Lascia una recensione</h2>
+             <FormRewiew key={movie.id} movie_id={movie.id} />
+          </section>
+           
+                <div className="flex flex-wrap flex-col gap-5 my-10 text-center" >
                     {
                         reviews?.map((review) => {
                             return (
